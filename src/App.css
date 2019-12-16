@@ -86,3 +86,9 @@ body, input, button {
   cursor: pointer;
 
 }
+
+.content form label span {
+  font-weight: normal; 
+  color: #999;
+  font-size: 12px;
+}
