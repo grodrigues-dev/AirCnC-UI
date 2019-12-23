@@ -29,7 +29,6 @@ export default function Dashboard(){
                 headers: {user_id}
             }); 
             setSpots(response.data)
-            
         }
         loadSpots();
     }, []);
@@ -39,10 +38,9 @@ export default function Dashboard(){
             {requests.map(request =>(
                 <li key={request._id}>
                     <p>
-                        <strong>{request.user.email}</strong> está solicitando uma reserva em 
-                        <strong>{request.spot.company}</strong> para da data: <strong> {request.date}</strong>
-                        <button>Aceitar</button>
-                        <button>Rejeitar</button>
+                        <strong>{request.user.email}</strong> está solicitando uma reserva em <strong>{request.spot.company}</strong> para da data: <strong> {request.date}</strong>
+                        <button className="accept">ACEITAR</button>
+                        <button className="reject"> REJEITAR</button>
                     </p>
                 </li>
             ))}
