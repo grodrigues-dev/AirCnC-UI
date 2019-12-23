@@ -9,9 +9,12 @@ export default function Dashboard(){
     const [spots, setSpots] = useState([]);
 
     useEffect(()=>{
-        const socket = socketio('http://localhost:3001'); 
-        socket.emit("msg", "Novas Conexões")
-        
+        const user_id = localStorage.getItem('user');
+        const socket = socketio('http://localhost:3001', {
+           query: {
+               user_id
+           } 
+        });         
     },[])
 
     useEffect(() => {
