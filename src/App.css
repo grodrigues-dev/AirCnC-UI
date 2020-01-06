@@ -116,3 +116,17 @@ body, input, button {
   color: #e55e5e;
 }
 
+.logout {
+  text-decoration: none;
+  color: #e55e5e; 
+  margin-top: 20px;
+}
+
+.link{
+  text-decoration: none
+}
+
+footer{
+  display: flex; 
+  justify-content: space-between
+}

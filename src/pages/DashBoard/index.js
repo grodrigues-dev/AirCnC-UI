@@ -72,10 +72,12 @@ export default function Dashboard() {
             </Link>
             <Link to="/bookings">
                 <button className="btn btn2">
-                    Gerenciar reserervas
+                    Gerenciar reservas
                 </button>
             </Link>
-            
+            <Link to="/" className="link">
+                <p className="logout"> sair</p>
+            </Link>
         </>
     )
 
