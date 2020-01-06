@@ -8,7 +8,8 @@ export default function Login({ history}) {
         event.preventDefault();
         const response = await api.post('/sessions', { email });
         const { _id } = response.data;
-        localStorage.setItem('user', _id)
+        localStorage.setItem('user', _id); 
+        localStorage.setItem('email', email)
         history.push('/dashboard')
     }
     return (

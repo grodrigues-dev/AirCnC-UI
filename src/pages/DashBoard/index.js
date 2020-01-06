@@ -69,8 +69,13 @@ export default function Dashboard() {
                 <button className="btn">
                     Cadastrar novo spot
                 </button>
-
             </Link>
+            <Link to="/bookings">
+                <button className="btn btn2">
+                    Gerenciar reserervas
+                </button>
+            </Link>
+            
         </>
     )
 
