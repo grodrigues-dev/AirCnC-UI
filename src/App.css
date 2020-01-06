@@ -149,3 +149,10 @@ footer{
   color: #e55e5e; 
   font-size: 18px;
 }
+
+.non-register{
+  margin-top: 10px;
+  font-weight: bold; 
+  display: flex;
+  justify-content: center
+}

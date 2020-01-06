@@ -32,7 +32,7 @@ export default function Login({ history }) {
                 />
                 <button type="submit" className="btn"> Entrar</button>
             </form>
-            <p>{register}</p>
+            <p className="non-register">{register}</p>
             <Link to="/register" className="link">
                 <p className="cadastro">Cadastre-se</p>
             </Link>
