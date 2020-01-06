@@ -26,6 +26,8 @@ export default function New({history}) {
         data.append('company',company );
         data.append('techs',techs );
         data.append('price',price );
+        console.log(data);
+        
         await api.post('/spots', data, {
             headers: {user_id}
         }); 

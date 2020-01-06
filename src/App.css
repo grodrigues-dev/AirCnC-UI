@@ -36,8 +36,6 @@ body, input, button {
   margin-top: 50px;
   border-radius: 4px;
   padding: 30px;
-
-
 }
 
 .content > p {
@@ -129,4 +127,25 @@ body, input, button {
 footer{
   display: flex; 
   justify-content: space-between
+}
+
+.cadastro{
+  color: #e55e5e;
+  margin-top: 25px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center
+
+}
+
+.created{
+  color: #e55e5e; 
+  margin-top: 25px;
+  justify-content: center; 
+  display: flex;
+}
+
+.access{
+  color: #e55e5e; 
+  font-size: 18px;
 }
