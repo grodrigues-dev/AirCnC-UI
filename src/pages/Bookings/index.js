@@ -11,20 +11,18 @@ export default function  Bookings(){
                 headers: {
                     user_email
                 }
-            });
-            console.log(response.data);
-            
+            });            
             setBookings(response.data); 
         }
-        
         loadBookings()
     }, [])
     return (
-       <ul>
+       <ul className ="booking">
           {bookings.map(booking =>(
               <li key={booking._id}>
-                  <p>O usuário {booking.user[0].login} solicitou uma reserva em {booking.spot[0].company} para a data de {booking.date} </p>
-                  <p>Deseja alterar o status da solicitação?</p>
+                  <p>O usuário <strong>{booking.user[0].login} </strong>
+                  solicitou uma reserva em <strong>{booking.spot[0].company}</strong>  para a data de <strong>{booking.date}</strong> </p>
+                  <p>Status: {booking.approved ? <span className="approved">APROVADO</span> : <span className="rejected">REJEITADO</span>} </p>
               </li>
           ))
           } 

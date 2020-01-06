@@ -97,4 +97,22 @@ body, input, button {
   font-size: 12px;
 }
 
+.booking{
+  list-style: none;
+  line-height: 25px; 
+  font-size: 16px;
+}
+
+.booking li {
+  margin-top: 25px;
+}
+
+.approved{
+  color: #84C870;
+
+}
+
+.rejected{
+  color: #e55e5e;
+}
 
