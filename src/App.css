@@ -156,3 +156,16 @@ footer{
   display: flex;
   justify-content: center
 }
+
+.button-approved{
+  width: 70px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+  padding: 2px;
+  cursor: pointer; 
+  background:none;
+  background: #84C870; 
+  border: none
+
+}

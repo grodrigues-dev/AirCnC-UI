@@ -43,6 +43,9 @@ export default function Register({ history }) {
                 <button type="submit" className="btn"> Cadastrar</button>
             </form>
             <p className="created">{created}</p>
+            <Link to="/" className="link">
+                <p className="logout"> voltar</p>
+            </Link>
         </>
     )
 }

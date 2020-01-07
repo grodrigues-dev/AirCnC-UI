@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../../services/api'
 
-export default function Bookings() {
+export default function Bookings({history}) {
     const [bookings, setBookings] = useState([]);
 
     useEffect(() => {
@@ -17,6 +17,11 @@ export default function Bookings() {
         }
         loadBookings()
     }, [])
+
+    async function handleAcceept(id) {
+        await api.post(`/bookings/${id}/approvals`);
+        window.location.reload()
+    }
     return (
         <>
             <ul className="booking">
@@ -25,6 +30,7 @@ export default function Bookings() {
                         <p>O usuário <strong>{booking.user[0].login} </strong>
                             solicitou uma reserva em <strong>{booking.spot[0].company}</strong>  para a data de <strong>{booking.date}</strong> </p>
                         <p>Status: {booking.approved ? <span className="approved">APROVADO</span> : <span className="rejected">REJEITADO</span>} </p>
+                        <span>{booking.approved ? '' : <button className="button-approved" onClick={()=>handleAcceept(booking._id)}>aprovar</button>}</span>
                     </li>
                 ))
                 }
